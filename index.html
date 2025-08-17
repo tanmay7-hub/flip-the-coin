@@ -40,8 +40,15 @@
           text-align: center;
           padding:40px;
           background: #404a65;
-      
+           width: 100%;
+          max-width: 600px;   /* ✅ added: keeps layout neat on desktops but fits smaller screens */
+          margin: auto; 
       }
+      .shadow img {
+        width: 100px;
+        max-width: 35vw;    /* ✅ added: shadow shrinks with viewport */
+        height: auto;
+       }
       h1 {
       font-size: 3rem;
       font-weight:bolder;
@@ -49,6 +56,7 @@
       text-shadow: 2px 2px 0px #35383f;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: #35383f;
+      word-wrap: break-word;
       }
       p{
         margin:10px;
@@ -81,6 +89,20 @@
         border: none;
         font-weight: bold;
       }
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2rem;     /* ✅ smaller heading on mobile */
+        }
+       .result {
+          font-size: 1.2rem;   /* ✅ smaller result text */
+          }
+       button {
+          width: 80%;          /* ✅ wider button (full-width feel) */
+          padding: 12px;
+         font-size: 1rem;
+         }
+}
+
     </style>
   </head>
   <body>
